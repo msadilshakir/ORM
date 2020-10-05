@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+{% if trans_tb %}
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Order ID</th>
+      </tr>
+    </thead>
+    {% for stud in trans_tb %}
+        <tbody>
+        <tr>
+            <td>{{ stud.name }}</td>
+            <td>{{ stud.email }}</td>
+            <td>{{ stud.order_id }}</td>
+        </tr>
+        
+        </tbody>
+    {% endfor %}
+
+  </table>
+
+{% endif %}
+{% endblock %}

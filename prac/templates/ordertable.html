@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1></h1>
+{% if ord_tb %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Order ID</th>
+            </tr>
+        </thead>
+        
+            <tbody>
+                {% for stud in ord_tb %}
+                    <tr>
+                        <td>{{ stud.id }}</td>
+                        <td>{{ stud.first_name }}</td>
+                        <td>{{ stud.last_name }}</td>
+                        <td>{{ stud.email }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        
+    </table>
+{% endif %}
+{% endblock %}
