@@ -24,5 +24,6 @@ urlpatterns = [
     path('transaction1', views.transaction1 ,name='transaction1'),
     path('ordertable', views.ordertable ,name='ordertable'),
     path('transactiontable', views.transactiontable ,name='transactiontable'),
+    path('tablejoin', views.tablejoin ,name='tablejoin'),
     
 ]

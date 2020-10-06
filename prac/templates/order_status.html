@@ -3,21 +3,23 @@
 {% block content %}
 
 {% load static %}
-{% if trans_tb %}
+{% if results %}
 <table class="table">
     <thead>
       <tr>
-        <th>Payment Type</th>
-        <th>Transaction Status</th>
+        <th>First Name</th>
         <th>Order ID</th>
+        <th>Transaction Status</th>
+        <th>Payment Type</th>
       </tr>
     </thead>
-    {% for stud in trans_tb %}
+    {% for stud in results %}
         <tbody>
         <tr>
-            <td>{{ stud.payment_type }}</td>
-            <td>{{ stud.transaction_status }}</td>
-            <td>{{ stud.order_id }}</td>
+            <td>{{ stud.0 }}</td>
+            <td>{{ stud.1 }}</td>
+            <td>{{ stud.2 }}</td>
+            <td>{{ stud.3 }}</td>
         </tr>
         
         </tbody>
