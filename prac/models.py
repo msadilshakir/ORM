@@ -12,7 +12,7 @@ class order(models.Model):
 
 class transaction(models.Model):
     
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
+    payment_type = models.CharField(max_length=30)
+    transaction_status= models.IntegerField(null=True)
     date = models.DateTimeField(auto_now_add=True)
     order_id = models.IntegerField(null=True)
